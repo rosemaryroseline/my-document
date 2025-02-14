@@ -1,9 +1,15 @@
 **COMPANY** : CODTECH IT SOLUTIONS
+
 **NAME** : ROSEMARY
+
 **INTERN ID** : CT6WLQS
+
 **DOMAIN** : WEB DEVELOPMENT
+
 **BATCH DURATION** : JANUARY 10th, 2025 TO FEBRUARY 25th, 2025
+
 **MENTOR NAME** : SRAVANI
+
 Real-Time Collaborative Document Editor
 The Real-Time Collaborative Document Editor is an advanced web-based application that allows multiple users to edit and collaborate on a document in real time. Built using React for the frontend, Node.js for the backend, and MongoDB as the database, this editor ensures seamless document synchronization using multiple WebSockets. Developed in Visual Studio, the project is designed to provide a smooth and efficient collaborative experience.
 
