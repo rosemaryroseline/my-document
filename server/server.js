@@ -1,5 +1,3 @@
-
-
 const mongoose=require('mongoose')
 const Document=require("./Document")
 const io=require('socket.io')(3001,{
@@ -13,7 +11,9 @@ mongoose.connect('mongodb://localhost/collaborative-document',{
     useUnifiedTopology: true,
 });
 
+//When a client requests a document, the server fetches it from the database or creates a new one if it doesn’t exist.
 const defaultValue=""
+//When a new client connects, it listens for document requests.
 io.on('connection',socket=>{
     socket.on('get-document',async documentId=>{
         const document=await findOrCreateDocument(documentId)
@@ -22,13 +22,14 @@ io.on('connection',socket=>{
         socket.on('send-changes',delta=>{
             socket.broadcast.to(documentId).emit('receive-changes',delta);
         })
+        //Periodically saves the document data to MongoDB.
         socket.on("save-document",async data=>{
 await Document.findByIdAndUpdate(documentId,{data})
         })
     })
 })
 
-
+//Finds an existing document or creates a new one in MongoDB.
 async function findOrCreateDocument(id){
     if(id==null)return
 

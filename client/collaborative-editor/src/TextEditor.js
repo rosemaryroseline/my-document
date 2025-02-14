@@ -37,10 +37,10 @@ export default function TextEditor() {
   if(socket==null || quill ==null)return
   console.log('one')
   socket.once('load-document',document=>{
-    console.log('two')
+   
 
     quill.setContents(document);
-    console.log('three')
+    
 
     quill.enable();
   })
@@ -92,12 +92,11 @@ return ()=>{
         const q = new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } 
         })
         q.disable()
-        console.log('five')
-
+       
         q.setText('Loading...')
         console.log('six')
         setQuill(q)
-        console.log('seven')
+        
         // return()=>{
         //     wrapperRef.innerHTML=""
         // }
