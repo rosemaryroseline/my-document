@@ -28,8 +28,9 @@ For deployment, the frontend can be hosted on Vercel or Firebase, while the back
 By leveraging React, Node.js, MongoDB, and WebSockets, this Real-Time Collaborative Document Editor provides a high-performance, scalable, and user-friendly solution for collaborative writing. The ability to edit the same document in real-time under the same URL while keeping separate documents isolated ensures efficient teamwork without data conflicts.
 
 
+** OUTPUT OF THE TASK **
 
-
+![Image](https://github.com/user-attachments/assets/11fe50b9-a56c-44b3-9721-2d1438e1c4a3)
 
 
 
